@@ -17,7 +17,7 @@
 // Neal Hannon
 //Alejandro Garcia
 //Nathaniel Corteza
-
+//Alexa Robles
 
 
 
@@ -53,6 +53,10 @@ void abFun(void);
 void function13AG(void);
 void theSigmaMethod(void);
 void jbInit(void);
+
+void printInitials(void);
+
+>>>>>>> 92dec82 (Added initials function)
 void ip21(void);
 void folksamEV(void);
 void sonionRH(void);
@@ -96,6 +100,9 @@ void hOsuna(void);
 void nnawshin(void);
 void WMRoom(void);
 void act1Version(void);
+void lexR(void);
+void FishNightmare(void);
+void FishingEvent(void);
 
 void nhfun(void);
 void printInitialsAngelM(void);
@@ -118,6 +125,10 @@ void jkRoom41(void);
 
 int main(int argc, char *argv[])
 {
+
+	printInitials();
+
+
 	int choice = 0;
 	char name[30] = "bob";
 	srand(time(NULL));
@@ -581,7 +592,8 @@ int main(int argc, char *argv[])
 			}
 			case 64:
 			{
-                                puts("room64");
+                                lexR();
+				FishNightmare();
                                 break;
 			}
 			case 65:
@@ -591,7 +603,8 @@ int main(int argc, char *argv[])
 			}
 			case 66:
 			{
-                                puts("room66");
+                                lexR();
+				FishNightmare();
                                 break;
 			}
 			case 67:
@@ -6067,5 +6080,114 @@ void jkRoom41(void)
             default:
                 printf("Invalid choice.\n");
         }
+    }
+}
+
+void lexR(void)
+{
+    printf("AR\n");
+}
+
+void FishingEvent(void)
+{
+    char events[4][80] =
+    {
+        "The hook sets and grabs your lip!",
+        "The current is on your side and pushes you sideways.",
+        "The fisherman starts reeling faster!",
+        "The hook loosens for a split second."
+    };
+
+    int r;
+
+    r = rand() % 4;
+
+    printf("%s\n", events[r]);
+}
+
+void FishNightmare(void)
+{
+    int choice;
+    int turns = 0;
+    bool escaped = false;
+
+    printf("\n=== Fish Nightmare ===\n");
+    printf("You are a fish minding your own business when you see a little worm wiggling around.\n");
+    printf("You decide you could go for a little snack.\n");
+    printf("It is not a worm. THEY TRICKED YOU! It is a hook!\n");
+
+    while (turns < 5 && escaped == false)
+    {
+        printf("\nChoice %d of 5\n", turns + 1);
+        printf("1. Fight the hook\n");
+        printf("2. Swim away\n");
+        printf("3. Try to get unhooked by shaking your head\n");
+        printf("4. Stay still\n");
+        printf("5. PANIC\n");
+        printf("Choose: ");
+        scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1:
+            {
+                printf("You fight against the hook as hard as you can.\n");
+                FishingEvent();
+
+                if (rand() % 2 == 0)
+                {
+                    printf("You break free and swim away!\n");
+                    escaped = true;
+                }
+                else
+                {
+                    printf("You are still stuck on the hook.\n");
+                }
+
+                break;
+            }
+
+            case 2:
+            {
+                printf("You swim deeper but the hook is stuck and the line follows you.\n");
+                break;
+            }
+
+            case 3:
+            {
+                printf("You shake your head side to side and up and down.\n");
+                FishingEvent();
+                break;
+            }
+
+            case 4:
+            {
+                printf("You stay still and hope they think they missed you.\n");
+                break;
+            }
+
+            case 5:
+            {
+                printf("You dash around blowing bubbles everywhere, scaring all the other fish.\n");
+                break;
+            }
+
+            default:
+            {
+                printf("Invalid choice.\n");
+            }
+        }
+
+        turns++;
+    }
+
+    if (escaped == true)
+    {
+        printf("\nYou survived Fish Nightmare!\n");
+    }
+    else
+    {
+        printf("\nYou get caught, but as they pull you up you give it one last try.\n");
+        printf("You wiggle, bounce, and twirl... SPLASH! You escape!\n");
     }
 }
