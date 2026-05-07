@@ -54,7 +54,6 @@ void function13AG(void);
 void theSigmaMethod(void);
 void jbInit(void);
 
-void printInitials(void);
 
 >>>>>>> 92dec82 (Added initials function)
 void ip21(void);
@@ -125,10 +124,6 @@ void jkRoom41(void);
 
 int main(int argc, char *argv[])
 {
-
-	printInitials();
-
-
 	int choice = 0;
 	char name[30] = "bob";
 	srand(time(NULL));
