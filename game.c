@@ -584,9 +584,8 @@ int main(int argc, char *argv[])
                                 break;
 			}
 			case 64:
-			{
-                                lexR();
-				FishNightmare();
+			{	
+				puts("room64");
                                 break;
 			}
 			case 65:
