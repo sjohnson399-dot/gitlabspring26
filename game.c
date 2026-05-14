@@ -21,6 +21,7 @@
 //Meretrout(J.Q)
 //Ivan Peralta
 //Dominic Carreto
+//Cristobal Yepez
 
 
 
@@ -158,8 +159,9 @@ int main(int argc, char *argv[])
 			}
 			case 4:
 			{
+				srand(time(NULL));
+				puts("Welcome to Room 4!\n\n");
 				CAYfrog();
-				puts("room4");
 				break;
 			}
 			case 5:
@@ -3964,10 +3966,78 @@ void GuckMan(void)
 	printf("EG\n");
 }
 
+//Room 4
 void CAYfrog(void)
 {
-	printf("CAY");
+	int choice;
+	int giveFly;
+
+	printf("You walk into a dark room...\n");
+	printf("As your eyes adjust, you see a huge glowing frog sitting in the corner.\n\n");
+	printf("The frog stares deeply into your soul.\n");
+	printf("The frog opens it's mouth and throws 3 items on the floor... Choose one!!! He croaks.\n\n");
+
+	printf("1. A map\n");
+	printf("2. A big dead juicy fly\n");
+	printf("3. A survival knife\n\n");
+
+	printf("Choose an item: ");
+	scanf("%d", &choice);
+	printf("\n");
+
+	if (choice == 1)
+	{
+		printf("The frog starts glowing even harder.\n");
+		printf("\"Wise Choice! Good luck on your journey!\"\n\n");
+		printf("The frog flings his tongue out and gives you the loudest high five you have ever heard.\n");
+		printf("The frog punches a hole through the wall with his tongue.\n");
+		printf("You walk into the next room.\n\n");
+	}
+
+	else if (choice == 2)
+	{
+		printf("The frog stares at the big dead juicy fly.\n\n");
+		printf("Do you give the frog the fly?\n");
+		printf("1. Yes\n");
+		printf("2. No\n\n");
+
+		printf("Enter your choice: ");
+		scanf("%d", &giveFly);
+
+		printf("\n");
+
+		if (giveFly == 1)
+		{
+			printf("\"THANK YOU! I will name my 547th child after you!\"\n\n");
+			printf("The frog happily eats the fly.\n");
+			printf("The frog punches a hole through the wall with his tongue.\n");
+			printf("You continue into the next room.\n\n");
+		}
+
+		else
+		{
+			printf("The frog flings his tongue out and gives you a black eye. TWACKK!\n");
+			printf("\"GET THWACKED YA LOSER!!\"\n\n");
+			printf("The frog also punches a hole through the wall with his tongue.\n");
+			printf("You stumble into the next room holding your face after that huge thwacking.\n\n");
+		}
+	}
+
+	else if (choice == 3)
+	{
+		printf("\"Excellent choice! Make sure not to cut your fingers!\"\n\n");
+		printf("The frog punches a hole through the wall with his tongue.\n");
+		printf("You walk into the next room.\n\n");
+	}
+
+	else
+	{
+		printf("The frog looks disappointed in your ability to follow directions.\n\n");
+	}
+
+	return;
 }
+
 //Room 55
 
 void jmItsGameTime(void)
